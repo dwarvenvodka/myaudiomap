@@ -5,19 +5,20 @@ const map = new mapboxgl.Map({
   style: 'mapbox://styles/mapbox/satellite-streets-v12',
   center: [76.9286, 43.2389],
   zoom: 4,
-  pitchWithRotate: true,
-  dragRotate: true,
-  touchZoomRotate: true
+  pitch: 0,
+  bearing: 0
 });
 
-const nav = new mapboxgl.NavigationControl({
-  visualizePitch: true
-});
+// кнопки масштабирования и компас
+map.addControl(
+  new mapboxgl.NavigationControl({
+    visualizePitch: true
+  }),
+  'top-right'
+);
 
-map.addControl(nav, 'top-right');
-
-map.touchZoomRotate.enableRotation();
-
+// включаем вращение
 map.dragRotate.enable();
+map.touchZoomRotate.enableRotation();
 
 const places = [];
