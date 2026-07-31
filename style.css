@@ -1,0 +1,35 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+}
+
+.mapboxgl-popup {
+  max-width: 260px;
+}
+
+.popup {
+  font-family: Arial, sans-serif;
+}
+
+.popup h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.popup p {
+  margin: 0 0 10px;
+  color: #666;
+  font-size: 13px;
+}
+
+.popup audio {
+  width: 100%;
+}
