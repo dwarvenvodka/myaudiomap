@@ -4,9 +4,20 @@ const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/satellite-streets-v12',
   center: [76.9286, 43.2389],
-  zoom: 4
+  zoom: 4,
+  pitchWithRotate: true,
+  dragRotate: true,
+  touchZoomRotate: true
 });
 
-map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+const nav = new mapboxgl.NavigationControl({
+  visualizePitch: true
+});
+
+map.addControl(nav, 'top-right');
+
+map.touchZoomRotate.enableRotation();
+
+map.dragRotate.enable();
 
 const places = [];
