@@ -7,4 +7,6 @@ const map = new mapboxgl.Map({
   zoom: 4
 });
 
+map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+
 const places = [];
